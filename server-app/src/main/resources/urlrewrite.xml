@@ -5,7 +5,7 @@
 
 <urlrewrite>
     <rule>
-        <from>^(?!/api).+</from>
+        <from>^/(?!(api|static/|manifest\.json|assets-manifest\.json|favicon\.ico)).*$</from>
         <to type="forward">/index.html</to>
     </rule>
 </urlrewrite>

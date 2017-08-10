@@ -1,0 +1,26 @@
+.contact-links {
+  width: 250px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin: 32px auto; }
+  .contact-links li {
+    display: inline-block;
+    list-style: none; }
+    .contact-links li a {
+      color: #102027;
+      text-decoration: none;
+      padding: 16px; }
+      .contact-links li a.active {
+        background: #cfd8dc; }
+
+.email,
+.phone,
+.twitter {
+  padding-top: 16px; }
+  .email h3, .email h4,
+  .phone h3,
+  .phone h4,
+  .twitter h3,
+  .twitter h4 {
+    text-align: center; }

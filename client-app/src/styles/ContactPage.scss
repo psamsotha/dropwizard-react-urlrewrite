@@ -1,0 +1,35 @@
+@import './_variables.scss';
+
+
+.contact-links {
+  width: 250px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin: 32px auto;
+
+  li {
+    display: inline-block;
+    list-style: none;
+
+    a {
+      color: $primary;
+      text-decoration: none;
+      padding: 16px;
+      
+      &.active {
+        background: $accent;
+      }
+      
+    }
+  }
+}
+
+.email,
+.phone,
+.twitter {
+  padding-top: 16px;
+  h3, h4 {
+    text-align: center;
+  }
+}
