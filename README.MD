@@ -2,9 +2,11 @@
 # React Browser History Routing with Dropwizard Backend Example
 
 This project is an example of how to use URL rewriting (in a Dropwizard application) to allow for use of
-React Router's `BrowserHistory`. The purpose is to allow for using HTML5 URLs (without the #).
+React Router's `BrowserHistory`. The purpose is to allow for using HTML5 URLs (without the #). Though
+this project uses React, this concept holds true for all client applications that use client side routing,
+such as Angular.
 
-In this project, this is accomplished with the use of the popular [Tucky UrlRewriteFilter][rewrite-filter].
+In this project, we accomplish the URL rewriting with the use of the popular [Tucky UrlRewriteFilter][rewrite-filter].
 We register the filter with Dropwizard's servlet environment.
 
 ```java
@@ -31,9 +33,9 @@ directly to the `index.html` file.
 ```
 
 The client app is built with [create-react-app][create-react-app]. When you build the client app,
-you will see all of the artifacts in the `build` folder of the `client-app`. Uf you look
-at the rewrite configuration, you will see that all those files are listed in the matching.
-We aer saying that if any request URL _does NOT_ match (negative lookahead), then forward the request.
+you will see all of the artifacts in the `build` folder of the `client-app`. If you look
+at the rewrite configuration, you will see that all those files are listed in the matcher.
+We are saying that if any request URL _does NOT_ match (negative lookahead), then forward the request.
 If the URLs do match, then just let the request go on its business as usual.
 
 
@@ -70,7 +72,8 @@ Base `http://localhost:8080`
 
 * `/api/example`
 
-If you open a browser and browse to `/contact/twitter`, you should see the page.
+If you open a browser and browse to `/contact/twitter`, you should see the page, which means that the
+URL rewriting is working. You can check the other URLs also to see that everything's working, even the server API.
 
 
 [rewrite-filter]: http://tuckey.org/urlrewrite/
